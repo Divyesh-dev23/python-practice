@@ -1,3 +1,18 @@
+def add(a, b):
+    return a + b
+
+def subtract(a, b):
+    return a - b
+
+def divide(a, b):
+    if b!=0:
+        return a/b
+    else:
+        return "Cannot divide by zero"
+    
+def multiply(a, b):
+    return a*b
+
 while True:
 
     op = input("Enter operation(+,-,*,/) or q to quit:-")
@@ -18,19 +33,12 @@ while True:
         continue
 
     if op == '+':
-        print(a+b)
-        print()
+        print(add(a,b))
     elif op == '-':
-        print(a-b)
+        print(subtract(a,b))
         print()
     elif op == '*':
-        print(a*b)
+        print(multiply(a,b))
         print()
     elif op == '/':
-        if b!=0:
-            print(a/b)
-            print()
-        else:
-            print("Cannot divide by zero\n")
-            continue
-
+        print(divide(a,b))
