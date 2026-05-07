@@ -11,16 +11,16 @@ points = 0
 
 guess_gen = random.randint(1,10)
 
-while (chances>0):
+while chances>0:
     try:
         guess_num = int(input(("Guess the number:- ")))
 
         if guess_num in range(1,11):
-            if(guess_gen==guess_num):
+            if guess_gen==guess_num:
                 print("Correct guess\n")
                 points += 1
                 print("Guess the next random number\n")
-                guess_gen = random.randint(1,10)
+                guess_gen = random.randint(1,10) # Generate new random number after correct guess
                 continue
             else:
                 chances -= 1
@@ -32,7 +32,7 @@ while (chances>0):
         else:
             print("Enter number within range\n")
             continue
-    except ValueError:
+    except ValueError: # Handling invalid inputs
         print("Invalid input")
         chances -= 1
         print("Remaining chances:", chances)
