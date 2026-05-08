@@ -8,13 +8,17 @@ def withdraw(balance , withdraw_amount):
     balance -= withdraw_amount
     return balance
 
-while True:
+def show_menu():
     print("""
-    1. DEPOSIT MONEY 
-    2. WITHDRAW MONEY
-    3. CHECK BALANCE
-    4. QUIT
-    """)
+        1. DEPOSIT MONEY 
+        2. WITHDRAW MONEY
+        3. CHECK BALANCE
+        4. QUIT
+        """)
+
+while True:
+    show_menu()
+
     try:
         option = int(input("Enter option:- "))
     except ValueError:
